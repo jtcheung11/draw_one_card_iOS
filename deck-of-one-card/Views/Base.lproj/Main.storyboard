@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="deck_of_one_card" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w0-Cp-6QX">
+                                <rect key="frame" x="0.0" y="54" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AcL-R8-fug">
+                                <rect key="frame" x="87" y="89" width="240" height="728"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaB-yC-qRv">
+                                <rect key="frame" x="150" y="821" width="114" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="DRAW!"/>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rGH-bz-NHX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AaB-yC-qRv" secondAttribute="trailing" id="0Id-Zd-Sf9"/>
+                            <constraint firstItem="AaB-yC-qRv" firstAttribute="bottom" secondItem="AcL-R8-fug" secondAttribute="bottom" constant="35" id="3dk-Gc-QPh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AaB-yC-qRv" secondAttribute="bottom" constant="10" id="Fb9-Pl-OpM"/>
+                            <constraint firstItem="AaB-yC-qRv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hxw-or-dQq"/>
+                            <constraint firstItem="2w0-Cp-6QX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="MUm-vr-HS9"/>
+                            <constraint firstItem="AcL-R8-fug" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Z76-bq-Jtk"/>
+                            <constraint firstItem="AcL-R8-fug" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eMa-eD-4Ac"/>
+                            <constraint firstItem="2w0-Cp-6QX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fTp-Ly-sug"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2w0-Cp-6QX" secondAttribute="trailing" id="ga9-uI-Shz"/>
+                            <constraint firstItem="AcL-R8-fug" firstAttribute="top" secondItem="2w0-Cp-6QX" secondAttribute="bottom" constant="5" id="iXh-ao-WVl"/>
+                            <constraint firstItem="AcL-R8-fug" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="vES-6p-8dS"/>
+                            <constraint firstItem="AaB-yC-qRv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="xoK-Bo-ozG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImage" destination="AcL-R8-fug" id="EvX-dh-D1t"/>
+                        <outlet property="cardLabel" destination="2w0-Cp-6QX" id="UBI-Bb-hSj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
